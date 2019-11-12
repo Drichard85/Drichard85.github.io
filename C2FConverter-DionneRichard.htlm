@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A First Program in Javascript</title>
+  </head>
+  <body>
+    <script>
+      document.write ( "<h3>Welcome to the Temperature Converter Program</h3>" ); 
+      <br>
+      document.write ( "<p>By Dionne richard</p>" );
+      <p><hr></p>
+    </script>
+  </body>
+ </html>
