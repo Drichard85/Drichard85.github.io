@@ -11,5 +11,8 @@
     <hr>
 <script type="text/javascript">
 var cTemp, fTemp, sEntry;
-sEntry = prompt("Enter Degrees C =","0");
+sEntry = prompt("Enter Degrees C","0");
+cTemp = parsFloat(sEntry);
+    fTemp = 1.8 * cTemp + 32;
+    document.write(cTemp + "C =", "0" = fTemp + "F");
 </script>
