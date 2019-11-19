@@ -25,7 +25,7 @@
     fTax = fGross * 0.15;
     }
     else {
-    fTax = fGross * 0.25;
+    fTax = 150 + (fGross - 1000)* 0.25;
     }
     document.write("<h2> Withheld Taxes = $" + fTax + "</h2>");
     fNet = fGross - fTax;
