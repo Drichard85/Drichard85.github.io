@@ -10,12 +10,11 @@
     <p>This Program is designed to easily convert temperature from Celcius to Fahrenheit.</p>
     <hr>
        <script type="text/javascript">
-        var cTemp = 0, fTemp = 0, sEntry; 
+        var cTemp, fTemp, sEntry; 
         sEntry = prompt("Enter Degrees C","0");
         cTemp = parseFloat(sEntry);
-        fTemp = cTemp * 1.8 + 32;
-        document.write("<h2>cTemp + "C =" + fTemp + "F"</h2>");
+        fTemp = 1.8 * cTemp + 32;
+        document.write(cTemp + "C =" + fTemp + "F");
        </script>
     </body>
 </html>
-
