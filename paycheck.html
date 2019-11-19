@@ -15,6 +15,7 @@
     var sSSN = window.prompt("Enter last 4 digits of your SSN", "");
     var fWage = parseFloat(prompt("Enter your hourly wage", "0"));
     var fHours = parseFloat(prompt("Enter your hours","0"));
+    document.write("<h1>ssn:" + sSSN + </H1>");
     if (fHours <= 40) {
     fGross = fWage * fHours;
     }
@@ -30,7 +31,7 @@
     }
     document.write("<h2> Withheld Taxes =$" + fTax + "</h2>");
     fNet = fGross - fTax;
-    document.write("<h1>ssn:" + sSSN+ "<br>" + sName  + "'s latest Paycheck is"
+    document.write("<h1>" + sName + "'s latest Paycheck ="
                    + "<br>$" + fNet  + "</h1>");
     </script>
     <big><a href="index.html">Home</a></big>
