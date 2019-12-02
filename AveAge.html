@@ -5,7 +5,7 @@
      <meta charset="utf-8">
      <title>Average Age calculator</title>
    </head>
-   <body>
+   <body style="background-color: #ff69b3;">
       <script>
         var fScore, fScoreTotal=0;
         var nCount=0;
@@ -14,7 +14,7 @@
         {
         fScoreTotal = fScoreTotal + fScore;
         nCount = nCount + 1;
-        document.write("Age" + nCount + " = " + fScore + "<br>");
+        document.write("Age " + nCount + " = " + fScore + "<br>");
         fScore = parseFloat(window.prompt("Enter the age (-1 to end)",""));
         }
         document.write("<h2><big>Average age = "
