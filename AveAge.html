@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset="utf-8">
+     <title>Average Age calculator</title>
+   </head>
+   <body>
+      <script>
+        var fScore, fScoreTotal=0;
+        var nCount=0;
+        fScore = parseFloat(window.prompt("Enter the age (-1 to end)",""));
+        while(fScore >= 0)
+        {
+        fScoreTotal = fScoreTotal + fScore;
+        nCount = nCount + 1;
+        document.write("Age" + nCount + " = " + fScore + "<br>");
+        fScore = parseFloat(window.prompt("Enter the age (-1 to end)",""));
+        }
+        document.write("<h2><big>Average age = "
+        + fScoreTotal/nCount + "</big></h2>");
+      </script>
+      <p> by Dionne Richard</P>
+   </body>
+</html>
+     
