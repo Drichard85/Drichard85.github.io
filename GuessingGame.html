@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Guessing Game Program</title>
+  </head>
+  <body style="background-color: #cff0ec;">
+     <h2>Number Guessing Program</h2>
+     <script>
+     var sNumber, nAttempt, nCount=0;     
+     sNumber =Math.floor(Math.random()*10);       
+     while(nCount < 4)
+     { 
+     nCount = nCount + 1;
+     nAttempt = parseInt(window.prompt("Guess number between 9 to 0 and prompt it!!","")); 
+     if(nAttempt == sNumber){
+     document.write("<p> Attempt number =   " + nAttempt + " is correct. You win!!</p> ");
+     break;
+     }
+     else if(nAttempt < sNumber){
+     document.write("<p> Attempt number =   " + nAttempt + "  is TOO LOW.</p>");
+     alert("TOO Low");
+     }
+     else {
+     document.write("<p> Attempt number =   " + nAttempt + "  is TOO HIGH.</p>");
+     alert("TOO High");
+     }
+     }  
+     if(nAttempt == sNumber){
+     document.write("<p> Great Job! "); 
+     }
+     else{
+     document.write("<h2>Sorry, You lose.</h2>");
+     }
+     </script>
+  </body>
+</html>
