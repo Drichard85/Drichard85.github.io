@@ -13,9 +13,9 @@
      while(nCount < 4)
      { 
      nCount = nCount + 1;
-     nAttempt = parseInt(window.prompt("Guess number between 9 to 0 and prompt it!!","")); 
+     nAttempt = parseInt(window.prompt("Guess number between 0 and 9","")); 
      if(nAttempt == sNumber){
-     document.write("<p> Attempt number =   " + nAttempt + " is correct. You win!!</p> ");
+     document.write("<p> Attempt number =   " + nAttempt + " is correct. Congrats, you won!</p> ");
      break;
      }
      else if(nAttempt < sNumber){
@@ -28,10 +28,10 @@
      }
      }  
      if(nAttempt == sNumber){
-     document.write("<p> Great Job! "); 
+     document.write("<p> Amazing Job! "); 
      }
      else{
-     document.write("<h2>Sorry, You lose.</h2>");
+     document.write("<h2>Sorry, You lost.</h2>");
      }
      </script>
     <a href="index.html">Home</a>
