@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Document</title>
+      <title>Casino Chip and Tax</title>
 </head>
 <body style="background-color: #cff0ec;">
      <h1 style= 'color: #d598a3;'> Casino Chip Counting</h1>
      <script>
-     var nTotalValue = 0, nTotalCount = 0, sEntry, nQty;
+     var nTotalValue = 0, nTotalCount = 0, sEntry, nQty, nReceipts;
+     nReceipts = getReceipts();
+     document.write("<h3>Total Receipts = $ + nReceipts + </h3>,hr>");
      sEntry = prompt("Enter Quantity BLACK Chips","0")
      nQty = parseInt(sEntry);
      nTotalValue = nQty * 5 + nTotalValue;
@@ -42,7 +44,20 @@
      ", Value= $" + nQty * 500 + "<h2>");
      document.write("<h1 style='color: #d598a3'>ALL Chips Quantity ="
      + nTotalCount + "<br>Value of all Chips = $" + nTotalValue + "<h1>");
-     </script>
+     
+     function getReceipts() {
+         var nSum = 0;
+         for(var nI = 1; nI < 100; nI++) {
+             var nEntry = parseInt(window.prompt("Enter Receipt " + nI + " or Q to Quit", ""));
+             if(isNaN(nEntry))
+                 break;
+             if9nEntry < 0) {
+                 alert("Receipts cannot be negative!\nTry again..");
+                 continue;
+             }
+             return nSum;
+         }
+    </script>
     <h2>                                         
     <big><a href="index.html">Home</a></big>
     </h2>   
