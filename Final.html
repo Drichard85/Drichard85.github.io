@@ -6,8 +6,14 @@
   <body style="background-color:#cff0ec; color: #e0e0e0;">
     <h1 style="color:#000000; text-align: center;">Temperature Conversion from C to F or F to C</h1>
   <script> 
-  function CtoF (Ctemp) 
-  function FtoC (Ftemp)
+  function CtoF (Ctemp) {
+    var (Ftemp - 32)*5/9;
+    return Ftemp;
+  }
+  function FtoC (Ftemp) {
+    var (Ftemp*9/5) + 32;
+    return Ctemp;
+    }
     var Ctemp, Ftemp, Fresult;
     Ctemp = window.prompt("Is Entry degrees C or F?");
     if (Ctemp == "C" || Ctemp =="c")
