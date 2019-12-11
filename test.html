@@ -18,33 +18,33 @@
      nTotalValue = nQty * 5 + nTotalValue;
      nTotalCount = nTotalCount + nQty;
      document.write("<h2 style='color: #000000;'>BLACK Chips Qty =" + nQty +
-     ", Value = $" + nQty * 5 + "<h2>");
+     ", Value = $" + nQty * 5 + "</h2>");
      sEntry=prompt("Enter Quantity BLUE Chips","0")
      nQty=parseInt(sEntry);
      nTotalValue=nQty*20+nTotalValue;
      nTotalCount=nTotalCount+nQty;
      document.write("<h2 style='color: #0000FF'>BLUE Chips Qty =" + nQty +
-     ", Value= $" + nQty * 20 + "<h2>");
+     ", Value= $" + nQty * 20 + "</h2>");
      sEntry=prompt("Enter Quantity RED Chips","0")
      nQty=parseInt(sEntry);
      nTotalValue=nQty*50+nTotalValue;
      nTotalCount=nTotalCount+nQty;
      document.write("<h2 style='color: #FF0000'>RED Chips Qty =" + nQty +
-     ", Value= $" + nQty * 50 + "<h2>");
+     ", Value= $" + nQty * 50 + "</h2>");
      sEntry=prompt("Enter Quantity GREEN Chips","0")
      nQty=parseInt(sEntry);
      nTotalValue=nQty*100+nTotalValue;
      nTotalCount=nTotalCount+nQty;
      document.write("<h2 style='color: #355e3b'>GREEN Chips Qty =" + nQty +
-     ", Value= $" + nQty * 100 + "<h2>");
+     ", Value= $" + nQty * 100 + "</h2>");
      sEntry=prompt("Enter Quantity GOLD Chips","0")
      nQty=parseInt(sEntry);
      nTotalValue=nQty*500+nTotalValue;
      nTotalCount=nTotalCount+nQty;
      document.write("<h2 style='color: #FFFF00'>GOLD Chips Qty =" + nQty +
-     ", Value= $" + nQty * 500 + "<h2>");
+     ", Value= $" + nQty * 500 + "</h2>");
      document.write("<h1 style='color: #d598a3'>ALL Chips Quantity ="
-     + nTotalCount + "<br>Value of all Chips = $" + nTotalValue + "</h1>");
+     + nTotalCount + "<br>Value of all Chips = $" + nTotalValue + "</br></h1>");
      nWinnings = nTotalValue - nReceipts;
      
          
@@ -66,24 +66,24 @@
      }
          
     function dResults() {
-        var fTax = 0.0, sSN = "000-00-000", fCashout;
+        var fTax = 0.0, sSN = "000-00-000", fCashout; 
         if(Confirm("Are you a CNMI resident?\n")) {
-            fTax = nWinnings * 0.10;
+            fTax = nWinnings * 0.10}
             sSN = prompt("ENTER SSN", "000-00-000");
         }
-        else if (Confirm("Are you a USA or Guam resident?")) {
+        ifelse(Confirm("Are you a USA or Guam resident?"));
             fTax = nWinnings * 0.20;
             sSN = prompt("ENTER SSN", "000-00-000");
-    }
+        {
          if(nWinnings >=0) {
-             document.write("<h3>Congrats you won $" + nWinnings + "!</h3>");
+             document.write("<h3>Congrats you won $" + nWinnings + "!</h3>")
          }
         else {
-            fTax = 0;
-            document.write("<h3>Sorry you lost $" + (-nWinnings) + ", better luck next time</h3>");
-        }
+            fTax = 0
+        }document.write("<h3>Sorry you lost $" + (-nWinnings) + ", better luck next time</h3>");
+        
        fCashout = nWinnings - fTax;
-         document.write("<h3>Cashout amount = $" + fCashout "</h3>");
+         document.write("<h3>Cashout amount = $" + fCashout + "</h3>");
          document.write("<p>Tax withheld = $" + fTax + "for SSN: " + sSN + "</p>");
          document.write("<p>(Tax witholdings based on residence. CNMI: 10%, USA/Guam: 20%, Foreign: 0%. Please keep receipt for your tax records</p>)");               
             
