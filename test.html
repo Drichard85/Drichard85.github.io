@@ -50,37 +50,41 @@
      function getReceipts() {
          var nSum = 0;
          for(var nI = 1; nI < 100; nI++) {
-             var nEntry = parseInt(window.prompt("Enter Receipt " + nI + " or Q to Quit", ""));
-             if(isNaN(nEntry))
+             var sEntry = parseInt(window.prompt("Enter Receipt " + nI + " or Q to Quit", ""));
+             if(isNaN(sEntry))
                  break;
-             if(nEntry < 0) {
+             if(sEntry < 0) {
                  alert("Receipts cannot be negative!\nTry again..");
                  continue;
              }
              
-             document.write("Receipt " + nI + " = $" + nEntry + "<br/>");
-             nSum = nSum + nEntry;
+             document.write("Receipt " + nI + " = $" + sEntry + "<br/>");
+             nSum = nSum + sEntry;
          }
          return nSum;
      }
          
     function dResults(nTotalValue, nWinnings) {
-        var fTax = 0.0, sSN = "000-00-000", fCashout; 
-        if(Confirm("Are you a CNMI resident?\n")) {
+        var fTax = 0.0, sSN = "000-00-000", fCashout; {
+        if(Confirm("Are you a CNMI resident?\n")) 
             fTax = nWinnings * 0.10}
-            sSN = prompt("ENTER SSN", "000-00-000");
-        }
-        elseif(Confirm("Are you a USA or Guam resident?"));
+            sSN = prompt("ENTER SSN", "000-00-000"); {
+        
+        elseif(Confirm("Are you a USA or Guam resident?"))
             fTax = nWinnings * 0.20;
             sSN = prompt("ENTER SSN", "000-00-000");
-        {
-         if(nWinnings >=0) {
+            }
+    }
+         {
+         if(nWinnings >=0) 
              document.write("<h3>Congrats you won $" + nWinnings + "!</h3>")
-         }
-        else {
-            fTax = 0
-        }document.write("<h3>Sorry you lost $" + (-nWinnings) + ", better luck next time</h3>");
-        
+             {
+        else 
+            fTax = 0 
+        document.write("<h3>Sorry you lost $" + (-nWinnings) + ", better luck next time</h3>");
+            }
+         }    
+             
        fCashout = nWinnings - fTax;
          document.write("<h3>Cashout amount = $" + fCashout + "</h3>");
          document.write("<p>Tax withheld = $" + fTax + "for SSN: " + sSN + "</p>");
