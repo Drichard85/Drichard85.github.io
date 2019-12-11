@@ -10,8 +10,7 @@
      <h1 style= 'color: #d598a3;'> Casino Chip Counting</h1>
      <script>
      var nTotalValue = 0, nTotalCount = 0, sEntry, nQty, nReceipts, nWinnings;
-     nReceipts = getReceipts();
-     dResults();    
+     nReceipts = getReceipts();    
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
      sEntry = prompt("Enter Quantity BLACK Chips","0")
      nQty = parseInt(sEntry);
@@ -46,7 +45,7 @@
      document.write("<h1 style='color: #d598a3'>ALL Chips Quantity ="
      + nTotalCount + "<br>Value of all Chips = $" + nTotalValue + "</br></h1>");
      nWinnings = nTotalValue - nReceipts;
-     
+     dResults();
          
      function getReceipts() {
          var nSum = 0;
