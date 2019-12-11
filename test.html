@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Casino Chip and Tax</title>
+</head>
+<body style="background-color: #cff0ec;">
+     <h1 style= 'color: #d598a3;'> Casino Chip Counting</h1>
+     <script>
+    var sChipColor = ["Black", "Blue", "Red", "Green", "Gold"];
+     var nTotalValue = 0, nTotalCount = 0, sEntry, nReceipts;
+     nReceipts = getReceipts();
+     document.write("<h3>Total Receipts = $ + nReceipts + </h3><hr>");
+     sEntry = prompt("Enter Quantity BLACK Chips","0")
+     sChipColor = parseInt(sEntry);
+     nTotalValue = Black * 5 + nTotalValue;
+     nTotalCount = nTotalCount + sChipColor;
+     document.write("<h2 style='color: #000000;'>BLACK Chips Qty =" + sChipColor +
+     ", Value = $" + Black * 5 + "<h2>");
+     sEntry=prompt("Enter Quantity BLUE Chips","0")
+     sChipColor=parseInt(sEntry);
+     nTotalValue=sChipColor*20+nTotalValue;
+     nTotalCount=nTotalCount+sChipColor;
+     document.write("<h2 style='color: #0000FF'>BLUE Chips Qty =" + sChipColor +
+     ", Value= $" + Blue * 20 + "<h2>");
+     sEntry=prompt("Enter Quantity RED Chips","0")
+     sChipColor=parseInt(sEntry);
+     nTotalValue=sChipColor*50+nTotalValue;
+     nTotalCount=nTotalCount+sChipColor;
+     document.write("<h2 style='color: #FF0000'>RED Chips Qty =" + sChipColor +
+     ", Value= $" + sChipColor * 50 + "<h2>");
+     sEntry=prompt("Enter Quantity GREEN Chips","0")
+     sChipColor=parseInt(sEntry);
+     nTotalValue=sChipColor*100+nTotalValue;
+     nTotalCount=nTotalCount+sChipColor;
+     document.write("<h2 style='color: #355e3b'>GREEN Chips Qty =" + sChipColor +
+     ", Value= $" + sChipColor * 100 + "<h2>");
+     sEntry=prompt("Enter Quantity GOLD Chips","0")
+     sChipColor=parseInt(sEntry);
+     nTotalValue=sChipColor*100+nTotalValue;
+     nTotalCount=nTotalCount+sChipColor;
+     document.write("<h2 style='color: #FFFF00'>GOLD Chips Qty =" + sChipColor +
+     ", Value= $" + sChipColor * 500 + "<h2>");
+     document.write("<h1 style='color: #d598a3'>ALL Chips Quantity ="
+     + nTotalCount + "<br>Value of all Chips = $" + nTotalValue + "<h1>");
+     
+     function getReceipts() {
+         var nSum = 0;
+         for(var nI = 1; nI < 100; nI++) {
+             var nEntry = parseInt(window.prompt("Enter Receipt " + nI + " or Q to Quit", ""));
+             if(isNaN(nEntry))
+                 break;
+             if(nEntry < 0) {
+                 alert("Receipts cannot be negative!\nTry again..");
+                 continue;
+             }
+             return nSum;
+         }
+     }
+    </script>
+    <h2>                                         
+    <big><a href="index.html">Home</a></big>
+    </h2>   
+ </body>
+ </html>
