@@ -9,7 +9,7 @@
 <body style="background-color: #cff0ec;">
      <h1 style= 'color: #d598a3;'> Casino Chip Counting</h1>
      <script>
-     var nTotalValue = 0, nTotalCount = 0, sEntry, nQty, nReceipts, nWinnings;
+     var nTotalValue = 0, nTotalCount = 0, sEntry, nQty, nReceipts, nWinnings, fTax, sSN;
      nReceipts = getReceipts();   
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
      sEntry = prompt("Enter Quantity BLACK Chips","0")
@@ -45,7 +45,21 @@
      document.write("<h1 style='color: #d598a3'>ALL Chips Quantity ="
      + nTotalCount + "<br>Value of all Chips = $" + nTotalValue + "</br></h1>");
      nWinnings = nTotalValue - nReceipts;
-     dResults(nWinnings); 
+     sSN = prompt("ENTER SSN", "000-00-000");    
+     if(Confirm("Are you a CNMI resident?\n")) {
+            fTax = nWinnings * 0.10;
+        }
+        ifelse(Confirm("Are you a USA or Guam resident?")) {
+            fTax = nWinnings * 0.20;
+            
+        }
+         if(nWinnings >=0) {
+             document.write("<h3>Congrats you won $" + nWinnings + "!</h3>")
+         }
+        else {
+            fTax = 0
+        document.write("<h3>Sorry you lost $" + (-nWinnings) + ", better luck next time</h3>");
+        }
          
      function getReceipts() {
          var nSum = 0;
@@ -63,29 +77,7 @@
          return nSum;
      }
          
-    function dResults(nWinnings) {
-        var fTax = 0.0, sSN = "000-00-000", fCashout; 
-        if(Confirm("Are you a CNMI resident?\n")) {
-            fTax = nWinnings * 0.10}
-            sSN = prompt("ENTER SSN", "000-00-000");
-        }
-        else if(Confirm("Are you a USA or Guam resident?\n")) {
-            fTax = nWinnings * 0.20;
-            sSN = prompt("ENTER SSN", "000-00-000"); 
-        }
-         if(nWinnings >=0) {
-             document.write("<h3>Congrats you won $" + nWinnings + "!</h3>");
-         }
-        else {
-            fTax = 0;
-        document.write("<h3>Sorry you lost $" + (-nWinnings) + ", better luck next time</h3>");
-        } 
-       fCashout = nWinnings - fTax;
-         document.write("<h3>Cashout amount = $" + fCashout + "</h3>");
-         document.write("<p>Tax withheld = $" + fTax + "for SSN: " + sSN + "</p>");
-         document.write("<p>(Tax witholdings based on residence. CNMI: 10%, USA/Guam: 20%, Foreign: 0%. Please keep receipt for your tax records</p>)");               
-            
-    }
+    
          
          
     
