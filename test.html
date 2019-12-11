@@ -9,42 +9,43 @@
 <body style="background-color: #cff0ec;">
      <h1 style= 'color: #d598a3;'> Casino Chip Counting</h1>
      <script>
-    var sChipColor = ["Black", "Blue", "Red", "Green", "Gold"];
-     var nTotalValue = 0, nTotalCount = 0, nReceipts;
+     var nTotalValue = 0, nTotalCount = 0, sEntry, nQty, nReceipts, nWinnings;
      nReceipts = getReceipts();
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
-     sChipColor = prompt("Enter Quantity BLACK Chips","0")
-     sChipColor = parseInt(sChipColor);
-     nTotalValue = sChipColor * 5 + nTotalValue;
-     nTotalCount = nTotalCount + sChipColor;
-     document.write("<h2 style='color: #000000;'>BLACK Chips Qty =" + sChipColor +
-     ", Value = $" + sChipColor * 5 + "<h2>");
-     sChipColor=prompt("Enter Quantity BLUE Chips","0")
-     sChipColor=parseInt(sChipColor);
-     nTotalValue=sChipColor*20+nTotalValue;
-     nTotalCount=nTotalCount+sChipColor;
-     document.write("<h2 style='color: #0000FF'>BLUE Chips Qty =" + sChipColor +
-     ", Value= $" + sChipColor * 20 + "<h2>");
-     sChipColor=prompt("Enter Quantity RED Chips","0")
-     sChipColor=parseInt(sChipColor);
-     nTotalValue=sChipColor*50+nTotalValue;
-     nTotalCount=nTotalCount+sChipColor;
-     document.write("<h2 style='color: #FF0000'>RED Chips Qty =" + sChipColor +
-     ", Value= $" + sChipColor * 50 + "<h2>");
-     sChipColor=prompt("Enter Quantity GREEN Chips","0")
-     sChipColor=parseInt(sChipColor);
-     nTotalValue=sChipColor*100+nTotalValue;
-     nTotalCount=nTotalCount+sChipColor;
-     document.write("<h2 style='color: #355e3b'>GREEN Chips Qty =" + sChipColor +
-     ", Value= $" + sChipColor * 100 + "<h2>");
-     sChipColor=prompt("Enter Quantity GOLD Chips","0")
-     sChipColor=parseInt(sChipColor);
-     nTotalValue=sChipColor*100+nTotalValue;
-     nTotalCount=nTotalCount+sChipColor;
-     document.write("<h2 style='color: #FFFF00'>GOLD Chips Qty =" + sChipColor +
-     ", Value= $" + sChipColor * 500 + "<h2>");
+     sEntry = prompt("Enter Quantity BLACK Chips","0")
+     nQty = parseInt(sEntry);
+     nTotalValue = nQty * 5 + nTotalValue;
+     nTotalCount = nTotalCount + nQty;
+     document.write("<h2 style='color: #000000;'>BLACK Chips Qty =" + nQty +
+     ", Value = $" + nQty * 5 + "<h2>");
+     sEntry=prompt("Enter Quantity BLUE Chips","0")
+     nQty=parseInt(sEntry);
+     nTotalValue=nQty*20+nTotalValue;
+     nTotalCount=nTotalCount+nQty;
+     document.write("<h2 style='color: #0000FF'>BLUE Chips Qty =" + nQty +
+     ", Value= $" + nQty * 20 + "<h2>");
+     sEntry=prompt("Enter Quantity RED Chips","0")
+     nQty=parseInt(sEntry);
+     nTotalValue=nQty*50+nTotalValue;
+     nTotalCount=nTotalCount+nQty;
+     document.write("<h2 style='color: #FF0000'>RED Chips Qty =" + nQty +
+     ", Value= $" + nQty * 50 + "<h2>");
+     sEntry=prompt("Enter Quantity GREEN Chips","0")
+     nQty=parseInt(sEntry);
+     nTotalValue=nQty*100+nTotalValue;
+     nTotalCount=nTotalCount+nQty;
+     document.write("<h2 style='color: #355e3b'>GREEN Chips Qty =" + nQty +
+     ", Value= $" + nQty * 100 + "<h2>");
+     sEntry=prompt("Enter Quantity GOLD Chips","0")
+     nQty=parseInt(sEntry);
+     nTotalValue=nQty*500+nTotalValue;
+     nTotalCount=nTotalCount+nQty;
+     document.write("<h2 style='color: #FFFF00'>GOLD Chips Qty =" + nQty +
+     ", Value= $" + nQty * 500 + "<h2>");
      document.write("<h1 style='color: #d598a3'>ALL Chips Quantity ="
-     + nTotalCount + "<br>Value of all Chips = $" + nTotalValue + "<h1>");
+     + nTotalCount + "<br>Value of all Chips = $" + nTotalValue + "</h1>");
+     nWinnings = nTotalValue - nReceipts;
+     document.write("<h1 style='color: #d598a3'>Total Winnings =" + nWinnings + "</h1>");
      
      function getReceipts() {
          var nSum = 0;
@@ -56,10 +57,15 @@
                  alert("Receipts cannot be negative!\nTry again..");
                  continue;
              }
-             nSum += nEntry
-             return nSum;
+             
+             document.write("Receipt " + nI + " = $" + nEntry + "<br/>");
+             nSum = nSum + nEntry;
          }
-     
+         return nSum;
+     }
+         
+    function nWinnings(
+       
     </script>
     <h2>                                         
     <big><a href="index.html">Home</a></big>
