@@ -11,7 +11,7 @@
      <script>
      var nTotalValue = 0, nTotalCount = 0, sEntry, nQty, nReceipts, nWinnings;
      nReceipts = getReceipts();
-     dResults(nWinnings);    
+     dResults();    
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
      sEntry = prompt("Enter Quantity BLACK Chips","0")
      nQty = parseInt(sEntry);
@@ -65,7 +65,7 @@
          return nSum;
      }
          
-    function dResults(nWinnings) {
+    function dResults() {
         var fTax = 0.0, sSN = "000-00-000", fCashout;
         if(Confirm("Are you a CNMI resident?\n")) {
             fTax = nWinnings * 0.10;
