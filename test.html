@@ -11,7 +11,6 @@
      <script>
      var nTotalValue = 0, nTotalCount = 0, sEntry, nQty, nReceipts, nWinnings;
      nReceipts = getReceipts();
-     nWinnings = nTotalValue-nReceipts;
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
      sEntry = prompt("Enter Quantity BLACK Chips","0")
      nQty = parseInt(sEntry);
@@ -45,7 +44,8 @@
      ", Value= $" + nQty * 500 + "<h2>");
      document.write("<h1 style='color: #d598a3'>ALL Chips Quantity ="
      + nTotalCount + "<br>Value of all Chips = $" + nTotalValue + "</h1>");
-    document.write("<h1 style='color: #d598a3'>Total Winnings =" + nWinnings + "</h1>"); 
+     nWinnings = nTotalValue - nReceipts;
+     document.write("<h1 style='color: #d598a3'>Total Winnings =" + nWinnings + "</h1>"); 
          
      function getReceipts() {
          var nSum = 0;
