@@ -12,10 +12,10 @@
     var sChipColor = ["Black", "Blue", "Red", "Green", "Gold"];
      var nTotalValue = 0, nTotalCount = 0, sEntry, nReceipts;
      nReceipts = getReceipts();
-     document.write("<h3>Total Receipts = $ + nReceipts + </h3><hr>");
+     document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
      sEntry = prompt("Enter Quantity BLACK Chips","0")
      sChipColor = parseInt(sEntry);
-     nTotalValue = Black * 5 + nTotalValue;
+     nTotalValue = sChipColor * 5 + nTotalValue;
      nTotalCount = nTotalCount + sChipColor;
      document.write("<h2 style='color: #000000;'>BLACK Chips Qty =" + sChipColor +
      ", Value = $" + Black * 5 + "<h2>");
@@ -56,9 +56,10 @@
                  alert("Receipts cannot be negative!\nTry again..");
                  continue;
              }
+             nSum += nEntry
              return nSum;
          }
-     }
+     
     </script>
     <h2>                                         
     <big><a href="index.html">Home</a></big>
