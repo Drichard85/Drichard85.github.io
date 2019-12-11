@@ -10,35 +10,35 @@
      <h1 style= 'color: #d598a3;'> Casino Chip Counting</h1>
      <script>
     var sChipColor = ["Black", "Blue", "Red", "Green", "Gold"];
-     var nTotalValue = 0, nTotalCount = 0, sEntry, nReceipts;
+     var nTotalValue = 0, nTotalCount = 0, nReceipts;
      nReceipts = getReceipts();
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
-     sEntry = prompt("Enter Quantity BLACK Chips","0")
-     sChipColor = parseInt(sEntry);
+     Black = prompt("Enter Quantity BLACK Chips","0")
+     sChipColor = parseInt(Black);
      nTotalValue = sChipColor * 5 + nTotalValue;
      nTotalCount = nTotalCount + sChipColor;
      document.write("<h2 style='color: #000000;'>BLACK Chips Qty =" + sChipColor +
      ", Value = $" + sChipColor * 5 + "<h2>");
-     sEntry=prompt("Enter Quantity BLUE Chips","0")
-     sChipColor=parseInt(sEntry);
+     Blue=prompt("Enter Quantity BLUE Chips","0")
+     sChipColor=parseInt(Blue);
      nTotalValue=sChipColor*20+nTotalValue;
      nTotalCount=nTotalCount+sChipColor;
      document.write("<h2 style='color: #0000FF'>BLUE Chips Qty =" + sChipColor +
      ", Value= $" + sChipColor * 20 + "<h2>");
-     sEntry=prompt("Enter Quantity RED Chips","0")
-     sChipColor=parseInt(sEntry);
+     Red=prompt("Enter Quantity RED Chips","0")
+     sChipColor=parseInt(Red);
      nTotalValue=sChipColor*50+nTotalValue;
      nTotalCount=nTotalCount+sChipColor;
      document.write("<h2 style='color: #FF0000'>RED Chips Qty =" + sChipColor +
      ", Value= $" + sChipColor * 50 + "<h2>");
-     sEntry=prompt("Enter Quantity GREEN Chips","0")
-     sChipColor=parseInt(sEntry);
+     Green=prompt("Enter Quantity GREEN Chips","0")
+     sChipColor=parseInt(Green);
      nTotalValue=sChipColor*100+nTotalValue;
      nTotalCount=nTotalCount+sChipColor;
      document.write("<h2 style='color: #355e3b'>GREEN Chips Qty =" + sChipColor +
      ", Value= $" + sChipColor * 100 + "<h2>");
      sEntry=prompt("Enter Quantity GOLD Chips","0")
-     sChipColor=parseInt(sEntry);
+     sChipColor=parseInt(Gold);
      nTotalValue=sChipColor*100+nTotalValue;
      nTotalCount=nTotalCount+sChipColor;
      document.write("<h2 style='color: #FFFF00'>GOLD Chips Qty =" + sChipColor +
