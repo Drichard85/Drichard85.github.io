@@ -19,8 +19,7 @@
      nReceipts = getReceipts();
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
      nChipTotal = getChips(sColor, nValue);   
-     document.write("<h3>Total Chip Value = $" + nChipTotal + "</h3><hr>");
-     document.write("<h4>Results for patron with SSN: " + sSn + </h4>");  
+     document.write("<h3>Total Chip Value = $" + nChipTotal + "</h3><hr>");  
      nWinnings = nChipTotal - nReceipts;
      tAway= nWinnings - nTax;
      if(nWinnings <=0)
@@ -30,18 +29,21 @@
      if (nResident == "Y" || nResident =="y") 
      {
          nTax = nWinnings * 0.1;
-    
+         
+        document.write("<h4>Results for patron with SSN: " + sSn + "</h4><br>");
         document.write("<h4>Winnings = $" + nWinnings + "</h4><hr>");
         document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
-     document.write("<h3>Cash out amount = $" + (tAway - nTax) + "</h3><hr>");   
+     document.write("<h5>Cash out amount = $" + (tAway - nTax) + "</h5>");   
      }
       
       if (nUSA == "Y" || nUSA =="y")
      {
          nTax = nWinnings * 0.2;
-     
+         
+     document.write("<h4>Results for patron with SSN: " + sSn + "</h4><br>");
+      document.write("<h4>Winnings = $" + nWinnings + "</h4><hr>");   
        document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
-     document.write("<h5>Your Take Home = $" + tAway + "</h5><hr>");    
+     document.write("<h5>Cash out amount = $" + (tAway - nTax) + "</h5>");    
      } 
      if(tAway <= 0)
      {
