@@ -15,10 +15,10 @@
      document.write("<h1>welcome to </h1> <p>by Dionne Richard</p>");
      nReceipts = getReceipts();
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
-     nChipTotal = getChips(sColor, nValue);
-     document.write("<h3>Total Chip Value = $" + nChipTotal + "</h3<hr>");
-     nWinnings = nChipTotal - nReceipts;
-     document.write("<h3>Total Winnings = $" + nWinnings + "</h3<hr>"); ;      
+     nChipTotal = getChips(sColor, nValue);   
+     document.write("<h3>Total Chip Value = $" + nChipTotal + "</h3><hr>");
+     nWinnings = nChipTotal-nReceipts     
+     document.write("<h3>Total Winnings = $" + nWinnings + "</h3><hr>"); ;      
      dResults(nChipTotal, nWinnings);
          
      function getReceipts() {
