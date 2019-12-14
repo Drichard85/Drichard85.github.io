@@ -14,17 +14,17 @@
      var nValue = [2, 20, 50, 100, 500];
      var nReceipt, nChipTotal, nTax, nWinnings;
      var nResident = window.prompt("Are you a CNMI resident? enter Y or N", "");
-      if (nResident == "Y" || nResident =="y")
-     {
-         nTax = nWinnings * 0.1;
-     }
      
      nReceipts = getReceipts();
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
      nChipTotal = getChips(sColor, nValue);   
      document.write("<h3>Total Chip Value = $" + nChipTotal + "</h3><hr>");
      nWinnings = nChipTotal - nReceipts;
-    
+     if (nResident == "Y" || nResident =="y")
+     {
+         nTax = nWinnings * 0.1;
+     }
+     
      
      document.write("<p>taxes withheld = $" + nTax "</p>");  
      
