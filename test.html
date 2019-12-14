@@ -12,11 +12,11 @@
      var sColor = ["Black", "Blue", "Red", "Green", "Gold"];
      var nValue = [2, 20, 50, 100, 500];
      var nReceipt, nChipTotal, nWinnings;
+     nWinnings = nChipTotal - nReceipts;    
      document.write("<h1>welcome to </h1> <p>by Dionne Richard</p>");
      nReceipts = getReceipts();
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
      nChipTotal = getChips(sColor, nValue);
-     nWinnings = nChipTotal - nReceipts;
      document.write("<h3>Total Chip Value = $" + nWinnings + "</h3<hr>");
      dResults(nChipTotal, nWinnings);
          
