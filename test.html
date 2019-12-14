@@ -50,11 +50,11 @@
       function dResults(nWinnings) {
         var fTax = 0.0, sSN = "000-00-000", fCashout; 
         if(Confirm("Are you a CNMI resident?\n")) {
-            fTax = nWinnings * 0.10;
+            fTax = nWinnings*0.10;
             sSN = prompt("ENTER SSN", "000-00-000");
         }
         else if(Confirm("Are you a USA or Guam resident?\n")) {
-            fTax = nWinnings * 0.20;
+            fTax = nWinnings*0.20;
             sSN = prompt("ENTER SSN", "000-00-000");
         }
          if(nWinnings >=0) {
