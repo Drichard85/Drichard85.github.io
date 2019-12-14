@@ -15,10 +15,12 @@
      var nReceipt = "0", nChipTotal = "0", nTax = "0", nWinnings = "0", nUSA, tAway = "0";
      var nResident = window.prompt("Are you a CNMI resident? enter Y or N", "");
      var nUSA = window.prompt("Are you a USA or Guam resident? enter Y or N", "")
+     var sSn = window.prompt("Enter last 4 digits of your SSN", "");
      nReceipts = getReceipts();
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
      nChipTotal = getChips(sColor, nValue);   
      document.write("<h3>Total Chip Value = $" + nChipTotal + "</h3><hr>");
+     document.write("<h4>Results for patron with SSN: " + sSn + </h4>");  
      nWinnings = nChipTotal - nReceipts;
      tAway= nWinnings - nTax;
      if(nWinnings <=0)
