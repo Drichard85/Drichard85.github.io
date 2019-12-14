@@ -42,7 +42,8 @@
          var nEntry = parseInt(window.prompt("How many " + sColor[nI] + " Chips?","0") );
          document.write(sColor[nI] + " chip quantity = " + nEntry + "  value = $" + (nEntry*nValue[nI]) + "<br/>");
          nSum += nEntry * nValue[nI];
-             
+         }  
+         return nSum;
      } 
          
       function dResults(nChipTotal, nWinnings) {
@@ -65,6 +66,7 @@
        fCashout = nWinnings - fTax;
          document.write("<h3>Cashout amount = $" + fCashout + "</h3>");                  
       }
+         return fCashout
      }
     </script>
     <h2><big><a href="index.html">Home</a></big></h2>   
