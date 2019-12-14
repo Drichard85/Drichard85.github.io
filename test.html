@@ -26,9 +26,9 @@
          nTax = nWinnings * 0.1;
      }
      else {
-        nTax = nWinnings *0.2; 
+        window.prompt("Are you a resident of USA or Guam? enter Y or N", "");
      }
-       
+     document.write("<p>taxes withheld = $" + nTax "</p>");  
      
      function getReceipts() {
          var nSum = 0;
