@@ -9,57 +9,16 @@
 <body style="background-color: #cff0ec;">
      <h1 style= 'color: #d598a3;'> Casino Chip Counting</h1>
      <script>
-     var nTotalValue = 0, nTotalCount = 0, sEntry, nQty, nReceipts, nWinnings, fTax, sSN;
-     nReceipts = getReceipts();   
+     var sColor = ["Black", "Blue", "Red", "Green", "Gold"];
+     var nValue = [2,20, 50, 100, 500];
+     var nReceipt, nChipTotal, nWinnings;
+     document.write("<h1>welcome to </h1> <p>by Dionne Richard</p>");
+     nReceipts = getReceipts();
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
-     sEntry = prompt("Enter Quantity BLACK Chips","0")
-     nQty = parseInt(sEntry);
-     nTotalValue = nQty * 5 + nTotalValue;
-     nTotalCount = nTotalCount + nQty;
-     document.write("<h2 style='color: #000000;'>BLACK Chips Qty =" + nQty +
-     ", Value = $" + nQty * 5 + "</h2>");
-     sEntry=prompt("Enter Quantity BLUE Chips","0")
-     nQty=parseInt(sEntry);
-     nTotalValue=nQty*20+nTotalValue;
-     nTotalCount=nTotalCount+nQty;
-     document.write("<h2 style='color: #0000FF'>BLUE Chips Qty =" + nQty +
-     ", Value= $" + nQty * 20 + "</h2>");
-     sEntry=prompt("Enter Quantity RED Chips","0")
-     nQty=parseInt(sEntry);
-     nTotalValue=nQty*50+nTotalValue;
-     nTotalCount=nTotalCount+nQty;
-     document.write("<h2 style='color: #FF0000'>RED Chips Qty =" + nQty +
-     ", Value= $" + nQty * 50 + "</h2>");
-     sEntry=prompt("Enter Quantity GREEN Chips","0")
-     nQty=parseInt(sEntry);
-     nTotalValue=nQty*100+nTotalValue;
-     nTotalCount=nTotalCount+nQty;
-     document.write("<h2 style='color: #355e3b'>GREEN Chips Qty =" + nQty +
-     ", Value= $" + nQty * 100 + "</h2>");
-     sEntry=prompt("Enter Quantity GOLD Chips","0")
-     nQty=parseInt(sEntry);
-     nTotalValue=nQty*500+nTotalValue;
-     nTotalCount=nTotalCount+nQty;
-     document.write("<h2 style='color: #FFFF00'>GOLD Chips Qty =" + nQty +
-     ", Value= $" + nQty * 500 + "</h2>");
-     document.write("<h1 style='color: #d598a3'>ALL Chips Quantity ="
-     + nTotalCount + "<br>Value of all Chips = $" + nTotalValue + "</br></h1>");
-     nWinnings = nTotalValue - nReceipts;
-     sSN = prompt("ENTER SSN", "000-00-000");    
-     if(Confirm("Are you a CNMI resident?\n")) {
-            fTax = nWinnings * 0.10;
-        }
-        ifelse(Confirm("Are you a USA or Guam resident?")) {
-            fTax = nWinnings * 0.20;
-            
-        }
-         if(nWinnings >=0) {
-             document.write("<h3>Congrats you won $" + nWinnings + "!</h3>")
-         }
-        else {
-            fTax = 0
-        document.write("<h3>Sorry you lost $" + (-nWinnings) + ", better luck next time</h3>");
-        }
+     nChipTotal = getChips(sColor, nValue);
+     document.write("<h3>Total Chip Value = $" + nChipTotal + "</h3<hr>");
+     nWinnings = nChipTotal - nReceipts;
+     displayResults(nChipTotal, nWinnings);
          
      function getReceipts() {
          var nSum = 0;
@@ -76,6 +35,18 @@
          }
          return nSum;
      }
+         
+     function getChips(sColor, nValue) {
+         var nSum = 0;
+         for(var nI = 0; nI <sColor.length; nI++) {
+         var nEntry = parseInt(window.prompt("How many" + sColor[nI] + "Chips?","0") );
+         document.write(sColor[nI] + "chip quantity = " + nEntry + "and value = $" + (nEntry*nValue[nI]) + "<br/>");
+         nSum += nEntry * nValue[nI];
+     
+     } 
+         
+         
+             
          
     
          
