@@ -10,7 +10,7 @@
   <body style="background-color:#cff0ec; color: #e0e0e0;">
     <h1 style="color:#000000; text-align: center;">Temperature Conversion from C to F or F to C</h1>
   <script>                   
-    var Ctemp, Ftemp, Fresult, Cresult;
+    var Ctemp, Fresult, Cresult;
     Fresult = FtoC(Ftemp, Fresult);
     Cresult = CtoF(Ctemp, Cresult);
     Ctemp = window.prompt("Is Entry degrees C or F?");
@@ -19,13 +19,13 @@
       Ctemp = parseFloat (window.prompt("Enter C degrees:", "0"));
       document.write("<h2 style=\"color:#ffb6c1; text-align: center;\">" + Ctemp + " C = " + CtoF(Ctem) + " F</h2>");
     }
-    if 
+    if (Ctemp == "F" || Ctemp =="f")
     {
-      Ftemp = parseFloat (window.prompt("Enter F degrees:", "0"));
-      document.write("<h2 style=\"color:#cc338b; text-align: center;\">" + Ftemp + "F = " + FtoC(Ftemp) + " C</h2>");
+      Ctemp = parseFloat (window.prompt("Enter F degrees:", "0"));
+      document.write("<h2 style=\"color:#cc338b; text-align: center;\">" + Ctemp + "F = " + FtoC(Ftemp) + " C</h2>");
     }
     
-    function FtoC(Ftemp, Fresult)
+    function FtoC(Ctemp, Fresult)
     {
       var Fresult = 5/9 * (Ftemp - 32);
       return Fresult;
