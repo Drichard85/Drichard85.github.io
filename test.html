@@ -8,9 +8,9 @@
 </head>
 <body style="background-color: #cff0ec;">
      <h1 style= 'color: #d598a3;'> Casino Chip Counting</h1>
-     
-     document.write("<h1>welcome to Casino</h1> <p>by Dionne Richard</p>");
-    document.write("<h5>(tax withholdings based on residency. CNMI: 10 percent, USA and Guam: 20 percent, others: 0 percent)</h5><hr>");
+     <h1>welcome to Casino</h1>
+    <p>by Dionne Richard</p><hr>
+   
      <script>  
      var sColor = ["Black", "Blue", "Red", "Green", "Gold"];
      var nValue = [2, 20, 50, 100, 500];
@@ -37,7 +37,7 @@
          
         
         document.write("<h4>Winnings = $" + nWinnings + "</h4>");
-        document.write("<h4>Tax withheld = $ + nTax + "</h4><hr>");
+        document.write("<h4>Tax withheld* = $ + nTax + "</h4><hr>");
      document.write("<h3>Cash out amount = $" + (tAway - nTax) + "</h3>");   
      }
       
@@ -46,7 +46,7 @@
          nTax = nWinnings * 0.2;
          
       document.write("<h4>Winnings = $" + nWinnings + "</h4><hr>");   
-       document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
+       document.write("<h4>Tax withheld* = $" + nTax + "</h4><hr>");
      document.write("<h3>Cash out amount = $" + (tAway - nTax) + "</h3>");    
      } 
      if(tAway <= 0)
@@ -85,9 +85,9 @@
          }  
          return nSum;
      } 
-         
-     
+        
     </script>
+     <h5>*(tax withholdings based on residency. CNMI: 10 %, USA and Guam: 20%, others: 0%)</h5>
     <h2><big><a href="index.html">Home</a></big></h2>   
  </body>
  </html>
