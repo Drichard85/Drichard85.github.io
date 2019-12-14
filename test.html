@@ -47,12 +47,13 @@
          }  
          return nSum;
      } 
-         function dResults(nValue, nWinnings) {
+         
+     function dResults(nValue, nWinnings) {
         var fTax = 0.0, sSN = "000-00-000", fCashout, nResidence;
         nResidence = window.prompt("Are you a CNMI resident? Yes or No"     
         if nResidence = (nResidence == "Yes" || nResidence == "yes")
                                    {
-            fTax = nWinnings*0.10;
+            fTax = nWinnings*0.10
             sSN = prompt("ENTER SSN", "000-00-000");
         }
         else
@@ -65,7 +66,7 @@
              document.write("<h3>Congrats you won $" + nWinnings + "!</h3>");
          }
         else {
-            fTax = 0;
+            fTax = 0
         document.write("<h3>Sorry you lost $" + nWinnings + ", better luck next time</h3>");
         }
          document.write("<h3>Cashout amount = $" + fCashout + "</h3>");
