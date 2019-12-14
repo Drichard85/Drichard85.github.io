@@ -20,7 +20,7 @@
      nChipTotal = getChips(sColor, nValue);   
      document.write("<h3>Total Chip Value = $" + nChipTotal + "</h3><hr>");
      nWinnings = nChipTotal - nReceipts;
-     tHome= nWinnings - nTax;
+     tAway= nWinnings - nTax;
      if(nWinnings <=0)
      {
          nTax = 0;
@@ -31,7 +31,7 @@
     
         document.write("<h3>Winnings = $" + nWinnings + "</h4><hr>");
         document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
-     document.write("<h5>Your Take Home = $" + tAway + "</h5><hr>");   
+     document.write("<h5>Cash out amount = $" + tAway + "</h5><hr>");   
      }
       
       if (nUSA == "Y" || nUSA =="y")
