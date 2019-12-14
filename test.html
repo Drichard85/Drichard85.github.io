@@ -41,7 +41,7 @@
          for(var nI = 0; nI < sColor.length; nI++) {
          var nEntry = parseInt(window.prompt("How many " + sColor[nI] + " Chips?","0") );
          document.write(sColor[nI] + " chip quantity = " + nEntry + "  value = $" + (nEntry*nValue[nI]) + "<br/>");
-         nSum = nEntry*nValue[nI];
+         nSum += nEntry * nValue[nI];
              
      } 
          
