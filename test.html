@@ -12,7 +12,7 @@
      document.write("<h1>welcome to Casino</h1> <p>by Dionne Richard</p>");    
      var sColor = ["Black", "Blue", "Red", "Green", "Gold"];
      var nValue = [2, 20, 50, 100, 500];
-     var nReceipt, nChipTotal, nTax = 0, nWinnings = 0, nUSA, tHome;
+     var nReceipt = "0", nChipTotal = "0", nTax = "0", nWinnings = "0", nUSA, tAway = "0";
      var nResident = window.prompt("Are you a CNMI resident? enter Y or N", "");
      var nUSA = window.prompt("Are you a USA or Guam resident? enter Y or N", "")
      nReceipts = getReceipts();
@@ -24,19 +24,23 @@
      if (nResident == "Y" || nResident =="y")
      {
          nTax = nWinnings*0.1;
+        document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
+     document.write("<h5>Your Take Home = $" + tAway + "</h5><hr>");   
      }
-     document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
-     document.write("<h5>Your Take Home = $" + tHome + "</h5><hr>");   
+      
       if (nUSA == "Y" || nResident =="y")
      {
          nTax = nWinnings*0.2;
+       document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
+     document.write("<h5>Your Take Home = $" + tAway + "</h5><hr>");    
      } 
      else
      {
          nTax = 0;
+         document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
+     document.write("<h5>Your Take Home = $" + tAway + "</h5><hr>"); 
      }  
-     document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
-     document.write("<h5>Your Take Home = $" + tHome + "</h5><hr>");    
+        
              
      function getReceipts() {
          var nSum = 0;
