@@ -50,19 +50,20 @@
          
      function dResults(nValue, nWinnings) {
         var fTax = 0.0, sSN = "000-00-000", fCashout, nResidence;
-        nResidence = window.prompt("Are you a CNMI resident? Yes or No"     
+        nResidence = window.prompt("Are you a CNMI resident? Yes or No");     
         if nResidence = (nResidence == "Yes" || nResidence == "yes")
                                    {
-            fTax = nWinnings*0.10
+            fTax = nWinnings * 0.10
             sSN = prompt("ENTER SSN", "000-00-000");
         }
         else
         {
-            fTax = nWinnings*0.20;
+            fTax = nWinnings * 0.20;
             sSN = prompt("ENTER SSN", "000-00-000");
         }
          
-         if(nWinnings >=0) {
+         if(nWinnings >=0) 
+         {
              document.write("<h3>Congrats you won $" + nWinnings + "!</h3>");
          }
         else {
@@ -72,7 +73,8 @@
          document.write("<h3>Cashout amount = $" + fCashout + "</h3>");
          fCashout = nWinnings - fTax;  
       }
-          
+        return fTax;
+         }
     </script>
     <h2><big><a href="index.html">Home</a></big></h2>   
  </body>
