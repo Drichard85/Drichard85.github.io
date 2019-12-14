@@ -48,6 +48,14 @@
        document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
      document.write("<h3>Cash out amount = $" + (tAway - nTax) + "</h3>");    
      } 
+       if (nUSA == "N" || nUSA =="n")
+     {
+         nTax = 0;
+           
+      document.write("<h4>Winnings = $" + nWinnings + "</h4>");   
+       document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
+     document.write("<h3>Cash out amount = $" + (tAway - nTax) + "</h3>");    
+     }  
      if(tAway <= 0)
      {
          alert("Sorry you lost, better luck next time!");
