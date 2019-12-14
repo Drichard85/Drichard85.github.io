@@ -18,7 +18,7 @@
      nChipTotal = getChips(sColor, nValue);
      document.write("<h3>Total Chip Value = $" + nChipTotal + "</h3<hr>");
      nWinnings = nChipTotal - nReceipts;
-     displayResults(nChipTotal, nWinnings);
+     dResults(nChipTotal, nWinnings);
          
      function getReceipts() {
          var nSum = 0;
@@ -45,8 +45,29 @@
      
      } 
          
-         
-             
+      function dResults(nChipTotal, nWinnings) {
+        var fTax = 0.0, sSN = "000-00-000", fCashout; 
+        if(Confirm("Are you a CNMI resident?\n")) {
+            fTax = nWinnings * 0.10;
+            sSN = prompt("ENTER SSN", "000-00-000");
+        }
+        ifelse(Confirm("Are you a USA or Guam resident?")) {
+            fTax = nWinnings * 0.20;
+            sSN = prompt("ENTER SSN", "000-00-000");
+        }
+         if(nWinnings >=0) {
+             document.write("<h3>Congrats you won $" + nWinnings + "!</h3>");
+         }
+        else {
+            fTax = 0
+        document.write("<h3>Sorry you lost $" + (-nWinnings) + ", better luck next time</h3>");
+        } 
+       fCashout = nWinnings - fTax;
+         document.write("<h3>Cashout amount = $" + fCashout + "</h3>");
+         document.write("<p>Tax withheld = $" + fTax + "for SSN: " + sSN + "</p>");
+         document.write("<p>(Tax witholdings based on residence. CNMI: 10%, USA/Guam: 20%, Foreign: 0%. Please keep receipt for your tax records</p>)");               
+            
+    }
          
     
          
