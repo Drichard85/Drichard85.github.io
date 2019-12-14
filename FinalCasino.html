@@ -16,6 +16,7 @@
      var nReceipt = "0", nChipTotal = "0", nTax = "0", nWinnings = "0", nUSA, tAway = "0";
      var nResident = window.prompt("Are you a CNMI resident? enter Y or N", "");
      var nUSA = window.prompt("Are you a USA or Guam resident? enter Y or N", "");
+     var nOther = window.prompt("Are you from somewhere other than afore mentioned areas? enter Y or N", "");  
      var sSn = window.prompt("Enter last 4 digits of your SSN", "");   
      nReceipts = getReceipts();
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
@@ -48,8 +49,8 @@
        document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
      document.write("<h3>Cash out amount = $" + (tAway - nTax) + "</h3>");    
      } 
-       if (nUSA == "N" || nUSA =="n") (nResident == "N" || nResident =="n")
-     {
+      if (nOther == "Y" || nOther =="y") 
+     
          nTax = 0;
            
       document.write("<h4>Winnings = $" + nWinnings + "</h4>");   
