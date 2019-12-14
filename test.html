@@ -17,8 +17,7 @@
      document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
      nChipTotal = getChips(sColor, nValue);   
      document.write("<h3>Total Chip Value = $" + nChipTotal + "</h3><hr>");
-     nWinnings = nChipTotal-nReceipts     
-     document.write("<h3>Total Winnings = $" + nWinnings + "</h3><hr>"); ;      
+     nWinnings = nChipTotal - nReceipts;          
      dResults(nChipTotal, nWinnings);
          
      function getReceipts() {
@@ -39,7 +38,7 @@
          
      function getChips(sColor, nValue) {
          var nSum = 0;
-         for(var nI = 0; nI <sColor.length; nI++) {
+         for(var nI = 0; nI < sColor.length; nI++) {
          var nEntry = parseInt(window.prompt("How many " + sColor[nI] + " Chips?","0") );
          document.write(sColor[nI] + " chip quantity = " + nEntry + "  value = $" + (nEntry*nValue[nI]) + "<br/>");
          nSum = nEntry * nValue[nI];
