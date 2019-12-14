@@ -9,7 +9,8 @@
 <body style="background-color: #cff0ec;">
      <h1 style= 'color: #d598a3;'> Casino Chip Counting</h1>
      <script>
-     document.write("<h1>welcome to Casino</h1> <p>by Dionne Richard</p>");    
+     document.write("<h1>welcome to Casino</h1> <p>by Dionne Richard</p>");
+     document.write("<h4>Results for patron with SSN: " + sSn + "</h4><br>");    
      var sColor = ["Black", "Blue", "Red", "Green", "Gold"];
      var nValue = [2, 20, 50, 100, 500];
      var nReceipt = "0", nChipTotal = "0", nTax = "0", nWinnings = "0", nUSA, tAway = "0";
@@ -30,7 +31,7 @@
      {
          nTax = nWinnings * 0.1;
          
-        document.write("<h4>Results for patron with SSN: " + sSn + "</h4><br>");
+        
         document.write("<h4>Winnings = $" + nWinnings + "</h4><hr>");
         document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
      document.write("<h5>Cash out amount = $" + (tAway - nTax) + "</h5>");   
@@ -40,7 +41,6 @@
      {
          nTax = nWinnings * 0.2;
          
-     document.write("<h4>Results for patron with SSN: " + sSn + "</h4><br>");
       document.write("<h4>Winnings = $" + nWinnings + "</h4><hr>");   
        document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
      document.write("<h5>Cash out amount = $" + (tAway - nTax) + "</h5>");    
