@@ -24,8 +24,7 @@
      if (nResident == "Y" || nResident =="y")
      {
          nTax = nWinnings*0.1;
-         if else(nWinnings <=0)
-         {
+     {
              nTax = 0}
         document.writ("<h3>Winnings = $" + nWinnings + "</h4><hr>");
         document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
@@ -38,8 +37,10 @@
        document.write("<h4>Tax withheld = $" + nTax + "</h4><hr>");
      document.write("<h5>Your Take Home = $" + tAway + "</h5><hr>");    
      } 
-     
-             
+     if(nWinnings <=0)
+     {
+         nTax = 0;
+     }
      function getReceipts() {
          var nSum = 0;
          for(var nI = 1; nI < 100; nI++) {
