@@ -55,19 +55,16 @@
             fTax = nWinnings*0.10;
             sSN = prompt("ENTER SSN", "000-00-000");
         }
-        else
+        else if
         {
             nResidence = window.prompt("Are you a USA or Guam resident? Yes or No")
         }
-         if nResidence = (nResidence == "Yes" || nResidence == "yes")
+          nResidence = (nResidence == "Yes" || nResidence == "yes")
              {
             fTax = nWinnings*0.20;
             sSN = prompt("ENTER SSN", "000-00-000");
         }
-         else 
-         {
-           fTax = 0;
-         }
+         
          if(nWinnings >=0) {
              document.write("<h3>Congrats you won $" + nWinnings + "!</h3>");
          }
